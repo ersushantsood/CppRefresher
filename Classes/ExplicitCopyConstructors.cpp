@@ -33,7 +33,7 @@ void PrintVehicle(VehicleWithDefaultCopyConstructor &vehicle){
 
 }
 
-//Explicit Copy Constructor
+//Explicit Copy Constructor called when you perform object assignment in any way
 VehicleWithExplicitCopyConstructor::VehicleWithExplicitCopyConstructor(VehicleWithExplicitCopyConstructor &copy){
     //This is called deep copy
     pointer_member = new int(*copy.pointer_member);
