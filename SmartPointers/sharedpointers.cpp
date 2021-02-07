@@ -27,7 +27,7 @@ OpensourceContributor * AssignOpensourceProject(){
 }*/
 
 //Now rewriting above by sharedpointers.
-//Shared ptr keeps the count of the references created while getting copied when passed as argument to methods
+//Shared ptr keeps the count of the references created while getting copied or when passed as argument to methods
 //When reference count is zero and shared pointer will destroy itself.
 class OpenSourceProject {
 
