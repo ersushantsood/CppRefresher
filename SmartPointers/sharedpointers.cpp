@@ -33,7 +33,7 @@ class OpenSourceProject {
 
 public:
     ~OpenSourceProject() {
-        std::cout<< "Destroy OpensourceProject called"< std::endl; 
+        std::cout<< "Destroy OpensourceProject called"<< std::endl; 
     }
 };
 class OpensourceContributor {
