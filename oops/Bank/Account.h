@@ -35,7 +35,10 @@ public:
     virtual float GetRateOfInterest()const;
 };
 
-//How Virtual methods work. Virtual keyword is used in Parent classes
+//How Virtual methods work. Virtual keyword is used in Parent classes. This keyword forces creation of vtable and vptr
+//Virtual keyword is used in Multiple inheritance also to create VIRTUAL INHERITANCE to avoid ambiguous func issue as 
+//now vptr is created in the child classes which will point to reference of same Parent class . Child childclass : virtual public Parent{}
+
 /*
 When compiler sees the virtual methods , it creates Virtual table/array and adds the 
 functionpointer to these methods in the virtual table . virtual tables are created for
