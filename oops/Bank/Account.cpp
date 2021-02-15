@@ -28,6 +28,6 @@ float Account::GetBalance()const{
         m_Balance = m_Balance + amount;
     }
 
-    float Account::GetRateOfInterest(){
+    float Account::GetRateOfInterest()const{
         return 0.0f;
     }

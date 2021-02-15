@@ -1,6 +1,11 @@
 #pragma once
 #include <string>
 
+//cannot be inherited due to final keyword
+class NonInheritableAccount final {
+
+};
+
 class Account {
     std::string m_Name;
     int m_AccNo;
@@ -27,10 +32,10 @@ public:
     //Compiler actually generates some code when it sees virtual keyword and these virtuals methods only work if invoked only using pointer/reference to the object
     virtual void WithdrawMoney(float amount);
     virtual void DepositMoney(float amount);
-    float GetRateOfInterest();
+    virtual float GetRateOfInterest()const;
 };
 
-//How Virtual methods work
+//How Virtual methods work. Virtual keyword is used in Parent classes
 /*
 When compiler sees the virtual methods , it creates Virtual table/array and adds the 
 functionpointer to these methods in the virtual table . virtual tables are created for
@@ -48,4 +53,9 @@ method's function pointer , compiler adds the offset in the virtual table addres
 calls the method using that function pointer.
 
 //ONE CANNOT OVERRIDE THE NON-VIRTUAL METHODS THEN
+
+//There is another keyword called override which use in the child class to tell compiler
+//that method is overridden from Parent. Override keyword can only be used for functions defined with virtual 
+//keyword.
+void WithdrawMoney(float amount)override {}
 */

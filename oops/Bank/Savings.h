@@ -5,6 +5,6 @@ class Savings: public Account {
 public:
     Savings(const std::string &name, float balance, float rate);
     ~Savings();
-    float GetRateOfInterest()const;
-    void CollectInterest();
+    float GetRateOfInterest()const override;
+    void CollectInterest()override;
 };

@@ -12,6 +12,6 @@ float Savings::GetRateOfInterest()const{
     return m_Rate;
 }
 
-void Savings::CollectInterest(){
+void Savings::CollectInterest() {
     m_Balance += (m_Balance * m_Rate);
 }
