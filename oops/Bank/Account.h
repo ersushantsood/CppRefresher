@@ -8,9 +8,15 @@ class Account {
 protected:
     float m_Balance;
 
+//base class should always have a virtual destructor as in case of dynamic binding, 
+    //when you delete parent class pointer , 
+    //runtime will only call the destructor of parent and not the child if Destructor of parent is not marked virtual
+    //Account *acct = new Savings("sood",100,0.5);
+    //delete acc;
 public:
     Account(const std::string &name, float balance);
-    ~Account();
+    
+    virtual ~Account();
     const std::string GetAccountName()const;
     float GetBalance()const;  //functions which doesnot modify the state of the class, are marked as const
     int GetAccountNo()const;
@@ -40,4 +46,6 @@ VirtualTable   <-------------   virtual pointer (member pointer variable)
 then it finds the virtual pointer which points to virtual table , then to access the
 method's function pointer , compiler adds the offset in the virtual table address and 
 calls the method using that function pointer.
+
+//ONE CANNOT OVERRIDE THE NON-VIRTUAL METHODS THEN
 */
